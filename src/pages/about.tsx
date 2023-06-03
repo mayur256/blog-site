@@ -1,16 +1,20 @@
 // top level imports
 import * as React from "react"
 
+// Gatsby API
+import { Link } from "gatsby"
 // Gatsby types
 import type { HeadFC, PageProps } from "gatsby"
+
+// Custom components
+import { Layout } from "../components/Layout"
 
 // Component definition
 const AboutPage: React.FC<PageProps> = () => {
     return (
-        <main>
-            <h1>Blog About Page</h1>
+        <Layout pageTitle="Blog About Page">
             <p>This page will contains some really nice details about the author of the site</p>
-        </main>
+        </Layout>
     )
 }
 
