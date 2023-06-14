@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <p>A simple blog website built to learn and understand gatsby js</p>
             <StaticImage
                 alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-                src="../images/pitfull.webp"
+                src="../images/pitbull.webp"
             />
         </Layout>
     )
