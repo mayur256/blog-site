@@ -8,6 +8,7 @@ import type { HeadFC, PageProps } from "gatsby"
 
 // Custom components
 import { Layout } from "../components/Layout"
+import { Seo } from "../components/Seo"
 
 // Component definition
 const AboutPage: React.FC<PageProps> = () => {
@@ -21,7 +22,7 @@ const AboutPage: React.FC<PageProps> = () => {
 export const Head: HeadFC = () => {
     return (
         <>
-            <title>About Page</title>
+            <Seo title="About Page" />
             <meta name="description" content="Your description" />
         </>
     )

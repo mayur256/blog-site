@@ -7,6 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 // Custom Components
 import { Layout } from "../components/Layout"
+import { Seo } from "../components/Seo"
 
 // Component definition
 const IndexPage: React.FC<PageProps> = () => {
@@ -21,6 +22,6 @@ const IndexPage: React.FC<PageProps> = () => {
     )
 }
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <Seo title="Home Page"/>
 
 export default IndexPage

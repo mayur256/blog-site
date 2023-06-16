@@ -2,7 +2,7 @@
 import * as React from "react"
 
 // Gatsby
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 // CSS modules
 import "./layout.css";
@@ -18,8 +18,22 @@ export const Layout: React.FC<IProps> = ({
     pageTitle,
     children
 }) => {
+    const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      siteBuildMetadata {
+        buildTime
+      }
+    }
+  `)
+    
     return (
         <div className={'container'}>
+            <header>{data.site.siteMetadata.title}</header>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
